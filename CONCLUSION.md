@@ -14,7 +14,5 @@
 
 
 💬 Reflexión final
-```
-```
 
 Con SOLID, no se busca la perfección, sino una base más robusta para construir sistemas confiables.
