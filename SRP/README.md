@@ -10,6 +10,7 @@ El **Principio de Responsabilidad Única (SRP)** establece que **una clase debe 
 
 Imaginemos una clase que hace varias tareas:
 ```php
+<?php
 class UserManager {
     public function createUser($name) {
         // Lógica para crear usuario
@@ -37,6 +38,7 @@ Esta clase tiene varias responsabilidades: creación de usuario, almacenamiento 
 Dividimos la clase en varias con responsabilidades únicas:
 
 ```php
+<?php
 class User {
     public $name;
     public function __construct($name) {
@@ -85,6 +87,7 @@ Ahora cada clase tiene una única responsabilidad:
 ### 🧨 Ejemplo que Viola SRP (Mala práctica) 
 
 ```php
+<?php
 class UserManager {
     private $db;
 
@@ -138,6 +141,7 @@ $userManager->createUser("Juan");
 
 
 ```php
+<?php
 class DatabaseConnection {
     public function query($sql) {
         echo "Ejecutando consulta SQL: $sql\n";
